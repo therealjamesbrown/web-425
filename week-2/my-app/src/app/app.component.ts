@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  Exercise 2.2
+; Author: Professor Krasso
+; Modified by: James Brown
+; Date:   7/13/2020
+; Description: exercise 2.2 per instructions
+;===========================================
+*/
+
 import { Component } from '@angular/core';
 
 @Component({
