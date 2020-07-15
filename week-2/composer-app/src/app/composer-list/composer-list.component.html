@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Composer List</h1>
+    <br />
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Full Name</th>
+        <th scope="col">Genre</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let composer of composers">
+              <td>{{ composer.fullName }}</td>
+              <td>{{ composer.genre }}</td>
+          </tr>
+    </tbody>
+  </table>
+</div>
