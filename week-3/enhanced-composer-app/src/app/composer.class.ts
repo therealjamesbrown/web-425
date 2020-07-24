@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  Exercise 3.2
+; Author: Professor Krasso
+; Modified by: James Brown
+; Date:   7/24/2020
+; Description: exercise 3.2 per instructions
+;===========================================
+*/
 import { IComposer } from './composer.interface';
 export class Composer {
     composers: Array<IComposer>;

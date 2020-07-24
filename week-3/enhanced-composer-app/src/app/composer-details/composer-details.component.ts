@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  Exercise 3.2
+; Author: Professor Krasso
+; Modified by: James Brown
+; Date:   7/24/2020
+; Description: exercise 3.2 per instructions
+;===========================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
 import { Composer } from '../composer.class';

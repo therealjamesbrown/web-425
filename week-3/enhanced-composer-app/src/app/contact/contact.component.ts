@@ -1,10 +1,10 @@
 /*
 ============================================
-; Title:  Exercise 2.4
+; Title:  Exercise 3.2
 ; Author: Professor Krasso
 ; Modified by: James Brown
-; Date:   3/7/2020
-; Description: exercise 2.4 per instructions
+; Date:   7/24/2020
+; Description: exercise 3.2 per instructions
 ;===========================================
 */
 
