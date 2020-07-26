@@ -1,0 +1,28 @@
+<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Name: {{ myProfile.fullName}}</h5>
+    </div>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Favorite Food: {{ myProfile.favoriteFood}}</h5>
+      </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Favorite Color: {{ myProfile.favoriteColor}}</h5>
+      </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Keywords: </h5>
+        <ul class="list-group">
+        <span *ngFor="let i of myProfile.keywords"> 
+          <li class="list-group-item">
+          {{ i }}
+        </li>
+        </span>
+      </ul>
+      </div>
+    </a>
+
