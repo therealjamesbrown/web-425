@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  Exercise 5.2
+; Author: Professor Krasso
+; Modified by: James Brown
+; Date:   8/5/2020
+; Description: exercise 5.2 per instructions
+;===========================================
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
