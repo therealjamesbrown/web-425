@@ -1,13 +1,12 @@
 /*
 ============================================
-; Title:  Exercise 6.3
+; Title:  Exercise 7.3
 ; Author: Professor Krasso
 ; Modified by: James Brown
-; Date:   8/15/2020
-; Description: exercise 6.3 per instructions
+; Date:   8/22/2020
+; Description: exercise 7.3 per instructions
 ;===========================================
 */
-
 
 import { Component } from '@angular/core';
 

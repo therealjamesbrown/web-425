@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  Exercise 7.3
+; Author: Professor Krasso
+; Modified by: James Brown
+; Date:   8/22/2020
+; Description: exercise 7.3 per instructions
+;===========================================
+*/
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
