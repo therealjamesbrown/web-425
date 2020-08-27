@@ -1,10 +1,11 @@
 <div fxLayout="column wrap">
     <ng-container *ngIf="books.length === 0">
-        <mat-spinner>
+        <mat-spinner class="spinner">
         </mat-spinner>
     </ng-container>
+    
     <div *ngIf="books.length > 0">
-        <h2 fxFlex class="green">Top {{books.length}} Favorite Books</h2>
+        <h2 class="green">Top {{books.length}} Favorite Books</h2>
         <div class="grid-container">
             <ng-container *ngFor="let book of books">
             <mat-card class="grid-container_item mat-elevation-z8">
@@ -22,6 +23,8 @@
                 </mat-card-content>
             </mat-card>
         </ng-container>
+
+        
         </div>
     </div>
 </div>

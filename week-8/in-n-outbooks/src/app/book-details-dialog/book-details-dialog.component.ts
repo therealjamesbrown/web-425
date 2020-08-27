@@ -1,13 +1,12 @@
 /*
 ============================================
-; Title:  Exercise 5.4
+; Title:  Exercise 8.2
 ; Author: Professor Krasso
 ; Modified by: James Brown
 ; Date:   8/5/2020
-; Description: exercise 5.4 per instructions
+; Description: exercise 8.2 per instructions
 ;===========================================
 */
-
 
 import { Component, OnInit, inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';

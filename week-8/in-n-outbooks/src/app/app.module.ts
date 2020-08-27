@@ -1,10 +1,10 @@
 /*
 ============================================
-; Title:  Exercise 6.2
+; Title:  Exercise 8.2
 ; Author: Professor Krasso
 ; Modified by: James Brown
-; Date:   8/15/2020
-; Description: exercise 6.2 per instructions
+; Date:   8/27/2020
+; Description: exercise 8.2 per instructions
 ;===========================================
 */
 

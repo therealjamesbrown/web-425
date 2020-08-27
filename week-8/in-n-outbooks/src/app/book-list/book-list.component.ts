@@ -49,6 +49,8 @@ export class BookListComponent implements OnInit {
         }
       }
     })
+
+    this.bookService.getBooks().subscribe();
   }
 
   showBookDetails(isbn: string){
