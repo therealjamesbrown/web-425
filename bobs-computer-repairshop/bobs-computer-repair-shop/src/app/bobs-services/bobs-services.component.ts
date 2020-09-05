@@ -93,7 +93,7 @@ getSelectedFruitsValue(){
     this.selectedServices.push({
       parts: this.form.parts.value,
       laborhours: this.form.laborhours.value,
-      services: this.selectedCheckboxes,
+      selServices: this.selectedCheckboxes,
     })
     console.log(this.selectedServices)
     //alert("Form Submitted!")

@@ -31,7 +31,24 @@
             </mat-card-content>
         </mat-card>
 
-        <p *ngFor="let i of selectedServices">Current selection: {{i.parts}}</p>
+
+
+        <table *ngFor="let params of selectedServices">
+            <tr>
+            <td>Labor Hours:{{params.laborhours}}</td>
+        </tr>
+        <tr>
+            <td>Parts: {{params.parts}}</td>
+        </tr>
+ 
+            <tr *ngFor="let s of params.selServices">
+                <td>Service: {{s.serviceName}}</td>
+                <td>Cost: {{s.cost}}</td>
+            </tr>
+
+            <tr>Total: {{t}}</tr>
+
+        </table>
     </div>
 
 
