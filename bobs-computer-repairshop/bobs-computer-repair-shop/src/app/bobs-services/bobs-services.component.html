@@ -1,6 +1,37 @@
-<div fxLFlex class="servicesForm">
-   <ul *ngFor="let service of services">
-      <li>Service: {{ service.serviceName }}</li> 
-      <li>Cost: {{ service.cost }}</li>
-   </ul>
-</div>
+<div fxLayout="row wrap" fxLayoutGap="20px">
+    <div fxFlex class="serviceForm">
+        <mat-card>
+            <mat-card-title>Order Form</mat-card-title>
+            <mat-card-content>
+            <div fxLayout="row wrap" fxLayoutGap="20px">
+                <form fxLayout="column" [formGroup]="serviceForm" (ngSubmit)="onSubmit($event); serviceForm.reset();">
+                    
+                    <div *ngFor="let control of serviceArray.controls; let i=index">
+                        <mat-checkbox fxFlex appearance="fill">
+                     <input type="checkbox" [formControl]="control" (change)="getSelectedFruitsValue()" id="inlineCheckbox{{i}}"/> 
+                     <label for="inlineCheckbox{{i}}">{{services[i].serviceName}} (${{services[i].cost}})</label>
+                    </mat-checkbox>
+                    </div>
+                    <mat-list>
+                        <mat-divider [inset]="true"></mat-divider>
+                    </mat-list>
+                    Parts:
+                    <mat-form-field fxFlex appearance="fill">
+                        <mat-label>Enter Value...</mat-label>
+                        <input type="text" name="txtparts" id="txtparts" matInput formControlName="parts" />
+                    </mat-form-field>
+                    Labor: 
+                    <mat-form-field fxFlex appearance="fill">
+                        <mat-label>Hours of Labor @ $50.00...</mat-label>
+                        <input type="text" name="txtlaborhours" id="txtlaborhours" matInput formControlName="laborhours" />
+                    </mat-form-field>
+                    <button mat-button color="primary" >Create Invoice</button>
+                    </form>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <p *ngFor="let i of selectedServices">Current selection: {{i.parts}}</p>
+    </div>
+
+

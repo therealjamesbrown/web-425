@@ -10,7 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,8 +21,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { BobsServicesComponent } from './bobs-services/bobs-services.component';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import { ServiceListComponent } from './service-list/service-list.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -47,11 +47,13 @@ import { ServiceListComponent } from './service-list/service-list.component';
     MatTableModule,
     MatDialogModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
     MatProgressSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
