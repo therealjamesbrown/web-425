@@ -1,20 +1,19 @@
-<div fxLayout="row wrap" fxLayoutGap="20px">
-    <div fxFlex class="serviceForm">
-        <mat-card>
-            <mat-card-title>Order Form</mat-card-title>
+
+        <mat-card class="mat-elevation-z10 form-container">
+            <mat-card-title>Welcome to Bob's Computer Repair Shop!</mat-card-title>
             <mat-card-content>
-            <div fxLayout="row wrap" fxLayoutGap="20px">
-                <form fxLayout="column" [formGroup]="serviceForm" (ngSubmit)="onSubmit($event); serviceForm.reset();">
-                    
+                <h2>Services</h2>
+                <form fxLayout="column" [formGroup]="serviceForm" (ngSubmit)="onSubmit($event); serviceForm.reset(); openDialog()">
                     <div *ngFor="let control of serviceArray.controls; let i=index">
-                        <mat-checkbox fxFlex appearance="fill">
-                     <input type="checkbox" [formControl]="control" (change)="getSelectedFruitsValue()" id="inlineCheckbox{{i}}"/> 
+                        <mat-checkbox fxFlex class="checkbox primary" appearance="fill">
+                     <input type="checkbox" [formControl]="control" (change)="getSelectedServiceValue()" id="inlineCheckbox{{i}}"/> 
                      <label for="inlineCheckbox{{i}}">{{services[i].serviceName}} (${{services[i].cost}})</label>
                     </mat-checkbox>
                     </div>
                     <mat-list>
                         <mat-divider [inset]="true"></mat-divider>
-                    </mat-list>
+                    </mat-list><br />
+                    <h2>Parts & Labor</h2>
                     Parts:
                     <mat-form-field fxFlex appearance="fill">
                         <mat-label>Enter Value...</mat-label>
@@ -23,32 +22,9 @@
                     Labor: 
                     <mat-form-field fxFlex appearance="fill">
                         <mat-label>Hours of Labor @ $50.00...</mat-label>
-                        <input type="text" name="txtlaborhours" id="txtlaborhours" matInput formControlName="laborhours" />
+                        <input type="number" name="txtlaborhours" id="txtlaborhours" matInput formControlName="laborhours" />
                     </mat-form-field>
                     <button mat-button color="primary" >Create Invoice</button>
                     </form>
-                </div>
             </mat-card-content>
         </mat-card>
-
-
-
-        <table *ngFor="let params of selectedServices">
-            <tr>
-            <td>Labor Hours:{{params.laborhours}}</td>
-        </tr>
-        <tr>
-            <td>Parts: {{params.parts}}</td>
-        </tr>
- 
-            <tr *ngFor="let s of params.selServices">
-                <td>Service: {{s.serviceName}}</td>
-                <td>Cost: {{s.cost}}</td>
-            </tr>
-
-            <tr>Total: {{t}}</tr>
-
-        </table>
-    </div>
-
-

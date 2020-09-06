@@ -19,10 +19,9 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { TestComponent } from './test/test.component';
 import { BobsServicesComponent } from './bobs-services/bobs-services.component';
-import { ServiceListComponent } from './service-list/service-list.component';
 import { MatSelectModule } from '@angular/material/select';
+import { InvoiceDialogComponent } from './invoice-dialog/invoice-dialog.component';
 
 
 @NgModule({
@@ -31,9 +30,8 @@ import { MatSelectModule } from '@angular/material/select';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    TestComponent,
     BobsServicesComponent,
-    ServiceListComponent
+    InvoiceDialogComponent
   ],
   imports: [
     BrowserModule,
