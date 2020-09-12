@@ -1,0 +1,52 @@
+<!--
+  /*
+============================================
+; Title:  Bobs-Computer-Repair-Shop
+; Author: James Brown
+; Date:   9/26/2020
+; Description: Angular APP for Bobs-Computer-Repair-Shop
+;===========================================
+*/
+-->
+
+<div fxLayout="column" fxLayoutAlign="space-between center" >
+        <mat-card class="mat-elevation-z10 form-container">
+            <mat-card-title>Welcome to Bob's Computer Repair Shop!</mat-card-title>
+            <mat-card-content>
+                <h2>Services</h2>
+                <div *ngIf="serviceForm.invalid && serviceForm.touched && serviceForm.dirty">
+                    <div class="msg-error">
+                      You must select at least one service and complete both parts and labor fields.
+                    </div>
+                  </div>
+                <form fxLayout="column" [formGroup]="serviceForm" (ngSubmit)="onSubmit($event); serviceForm.reset(); openDialog()">
+                    <div *ngFor="let control of serviceArray.controls; let i=index">
+                        <mat-checkbox fxFlex class="checkbox primary" appearance="fill" >
+                     <input type="checkbox" [formControl]="control" (change)="getSelectedServiceValue()" id="inlineCheckbox{{i}}"/> 
+                     <label for="inlineCheckbox{{i}}">{{services[i].serviceName}} (${{services[i].cost}})</label>
+                    </mat-checkbox>
+                    </div>
+                    <mat-list>
+                        <mat-divider [inset]="true"></mat-divider>
+                    </mat-list><br />
+                    
+                    <h2>Parts & Labor</h2>
+                    Parts:
+                    <mat-form-field fxFlex appearance="fill">
+                        <mat-label>Enter Parts Description...</mat-label>
+                        <input type="text" name="txtparts" id="txtparts" matInput formControlName="parts" />
+                    </mat-form-field>
+                    Labor: 
+                    <mat-form-field fxFlex appearance="fill">
+                        <mat-label>Hours of Labor @ $50.00/hr...</mat-label>
+                        <input type="number" name="txtlaborhours" id="txtlaborhours" matInput formControlName="laborhours" />
+                    </mat-form-field>
+                    <button mat-button color="primary"[disabled]="!serviceForm.valid">Create Invoice</button>
+                    </form>
+            </mat-card-content>
+        </mat-card>
+</div>
+<br /><br />
+
+
+ 

@@ -1,0 +1,39 @@
+<!--
+  /*
+============================================
+; Title:  Bobs-Computer-Repair-Shop
+; Author: James Brown
+; Date:   9/26/2020
+; Description: Angular APP for Bobs-Computer-Repair-Shop
+;===========================================
+*/
+-->
+
+<h1 mat-dialog-title>Review Invoice</h1>
+<mat-dialog-content class="mat-typography">
+  <h3 class="bold">Selected Services</h3>
+  <ul>
+    <li *ngFor="let services of data.resultData[0].selServices">
+{{ services.serviceName }} ({{services.cost | currency}})
+    </li>
+</ul>
+
+<mat-list>
+    <mat-divider></mat-divider>
+</mat-list><br />
+<h3 class="bold">Parts and Labor</h3><br />
+<h3>Parts: {{ parts }}</h3>
+<h3>Labor hours($50.00 per hour): {{ laborhours }}</h3>
+<h5>{{ laborhours }} hours x $50 per hour = {{laborhours*50 | currency}}</h5>
+<br /><br />
+<mat-list>
+    <mat-divider></mat-divider>
+</mat-list>
+<h3 align="end">Grand Total: {{ calcTotal | currency }} </h3>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false" color="warn">Discard</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">Create Invoice</button>
+</mat-dialog-actions>
+
+
